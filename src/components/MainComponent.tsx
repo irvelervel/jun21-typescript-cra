@@ -25,7 +25,7 @@ class MainComponent extends Component<MainComponentProps, MainComponentState> {
         <Alert variant={this.state.alertVariant} onClick={() => this.setState({ alertVariant: 'danger' })}>
           BOOTSTRAP MESSAGE
         </Alert>
-        <h1>{this.props.title}</h1>
+        <h1 onClick={() => this.props.history.push('/form')}>{this.props.title}</h1>
         <p>{this.props.subTitle || 'No subtitle in this component'}</p>
         <First title={this.props.title} count={0} />
       </div>
